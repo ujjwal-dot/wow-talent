@@ -31,6 +31,7 @@ const ListView = () => {
     [`&.${tableCellClasses.head}`]: {
       
       //backgroundColor: theme.palette.common.black,
+      fontSize: 16,
       color: theme.palette.common.white,
     },
     [`&.${tableCellClasses.body}`]: {
@@ -60,8 +61,8 @@ const ListView = () => {
    
     <TableContainer component={Paper} sx={{backgroundColor:'#31384b',padding:'5px'}}>
     <Table sx={{maxWidth:'96vw' ,backgroundColor: '#31384b',padding:'5px 10px'}} aria-label="customized table">
-      <TableHead sx={{backgroundColor:'#161c32'}}>
-        <TableRow >
+      <TableHead sx={{backgroundColor:'#161c32',maxHeight:'10px'}}>
+        <TableRow sx={{}}>
           <StyledTableCell align='center'>Date</StyledTableCell>
           <StyledTableCell align="center">Day Install</StyledTableCell>
           <StyledTableCell align="center">Platform</StyledTableCell>

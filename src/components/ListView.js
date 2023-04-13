@@ -11,6 +11,10 @@ import Paper from '@mui/material/Paper';
 import { blue, grey } from '@mui/material/colors';
 import '../style.css'
 import { format } from 'date-fns';
+import { Icon } from '@mui/material';
+
+import AdbIcon from '@mui/icons-material/Adb';
+import AppleIcon from '@mui/icons-material/Apple';
 
 const ListView = () => {
   
@@ -60,15 +64,17 @@ const ListView = () => {
 
    
     <TableContainer component={Paper} sx={{backgroundColor:'#31384b',padding:'5px'}}>
-    <Table sx={{maxWidth:'96vw' ,backgroundColor: '#31384b',padding:'5px 10px'}} aria-label="customized table">
+    <Table sx={{maxWidth:'96vw',backgroundColor: '#31384b',padding:'5px 10px'}} aria-label="customized table">
       <TableHead sx={{backgroundColor:'#161c32',maxHeight:'10px'}}>
-        <TableRow sx={{}}>
+        <TableRow >
           <StyledTableCell align='center'>Date</StyledTableCell>
           <StyledTableCell align="center">Day Install</StyledTableCell>
-          <StyledTableCell align="center">Platform</StyledTableCell>
+          <StyledTableCell align="center">platform</StyledTableCell>
           <StyledTableCell align="center">Day Uninstall</StyledTableCell>
-          <StyledTableCell align="center">Churn platform</StyledTableCell>
-          <StyledTableCell align="center">ChurnTotal</StyledTableCell>
+          <StyledTableCell align="center">Platform</StyledTableCell>
+
+          <StyledTableCell align="center">Churn rate</StyledTableCell>
+          <StyledTableCell align="left">Churn Platform</StyledTableCell>
 
         </TableRow>
       </TableHead>
@@ -76,13 +82,30 @@ const ListView = () => {
         {items.map((row) => (
           <StyledTableRow key={row.created_At}>
             <StyledTableCell component="th" scope="row"align='center'>
-              {format(new Date(row.created_At),'p,dd/MM/yyyy')}
+              {format(new Date(row.created_At),'dd/MM/yyyy')}
             </StyledTableCell>
+
             <StyledTableCell align="center">{row.totalinstall}</StyledTableCell>
-            <StyledTableCell align="center">{row.android_churn}</StyledTableCell>
+
+            <StyledTableCell align="left" >
+              <StyledTableRow > <AdbIcon fontSize='3px'/>{row.android_install}</StyledTableRow>
+              <StyledTableRow ><AppleIcon fontSize='3px'/>{row.ios_install}</StyledTableRow>
+             </StyledTableCell>
+
             <StyledTableCell align="center">{row.totaluninstall}</StyledTableCell>
+
+            <StyledTableCell align="left">
+                           <StyledTableRow > <AdbIcon fontSize='3px'/>{row.android_churn}</StyledTableRow>
+                           <StyledTableRow ><AppleIcon fontSize='3px'/>{row.ios_churn}</StyledTableRow>
+            </StyledTableCell>
+
             <StyledTableCell align="center">{row.ios_churn}</StyledTableCell>
-            <StyledTableCell align="center">{row.totalchurn}</StyledTableCell>
+
+            <StyledTableCell align="left">
+              <StyledTableRow > <AdbIcon fontSize='3px'/>{row.android_churn}</StyledTableRow>
+              <StyledTableRow ><AppleIcon fontSize='3px'/>{row.ios_churn}</StyledTableRow>
+
+             </StyledTableCell>
 
           </StyledTableRow>
         ))}

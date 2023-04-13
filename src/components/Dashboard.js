@@ -30,28 +30,8 @@ function Dashboard() {
                  <FaBullseye size="40px" />
 
                     <div className='item'>
-                    {item.totaluninstall}<br/>
-                    <text>App Installed</text>
-                    </div>
-                   
-
-                 </div>
-                 <div className='card'>
-                 <FaBullseye size="40px" />
-
-                    <div className='item'>
-                    {item.activeinstall}<br/>
-                    <text>App Installed</text>
-                        </div>
-                     
-
-                 </div>
-                 <div className='card'>
-                 <FaBullseye size="40px" />
-
-                    <div className='item'>
                     {item.aliveappusers}<br/>
-                    <text>App Installed</text> 
+                    <text>Alive App Users</text> 
                         </div>
                     
 
@@ -61,17 +41,39 @@ function Dashboard() {
 
                     <div className='item'>
                     {item.churn}<br/>
-                    <text>App Installed</text>
+                    <text>Churn Rate</text>
                         </div>
                    
 
                  </div>
                  <div className='card'>
                  <FaBullseye size="40px" />
+
+                    <div className='item'>
+                    {item.totaluninstall}<br/>
+                    <text>App Uninstalled</text>
+                    </div>
+                   
+
+                 </div>
+                 <div className='card'>
+                 <FaBullseye size="40px" />
+
+                    <div className='item'>
+                    {item.activeinstall}<br/>
+                    <text>Active Installs</text>
+                        </div>
+                     
+
+                 </div>
+                 
+                 
+                 <div className='card'>
+                 <FaBullseye size="40px" />
  
                     <div className='item'>
                     {item.alivechurn}<br/>
-                    <text>App Installed</text>
+                    <text>Alive Churn Rate</text>
                     </div>
                   
 

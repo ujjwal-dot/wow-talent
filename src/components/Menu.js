@@ -18,12 +18,23 @@ import People from '@mui/icons-material/People';
 import PermMedia from '@mui/icons-material/PermMedia';
 import Dns from '@mui/icons-material/Dns';
 import Public from '@mui/icons-material/Public';
+import '../wow-talent.png'
+import { Avatar, ImageListItem, ListItemAvatar } from '@mui/material';
+import { Image } from '@mui/icons-material';
 
 const data = [
-  { icon: <People />, label: 'Dashboard' },
-  { icon: <Dns />, label: 'Database' },
-  { icon: <PermMedia />, label: 'Storage' },
-  { icon: <Public />, label: 'Hosting' },
+  { icon: <Dns />, label: 'Dashboard' },
+  { icon: <People />, label: 'Wow Users' },
+  { icon: <PermMedia />, label: 'Internal User' },
+  { icon: <Public />, label: 'Category' },
+  { icon: <Public />, label: 'Info Page' },
+  { icon: <Public />, label: 'FAQ' },
+  { icon: <People />, label: 'Coin' },
+  { icon: <People />, label: 'Coin Purcahsed' },
+  { icon: <People />, label: 'Coin Earn' },
+  { icon: <People />, label: 'User Deleted' },
+  { icon: <People />, label: 'User Feedback' },
+
 ];
 
 const FireNav = styled(List)({
@@ -63,10 +74,10 @@ export default function Menu() {
         <Paper elevation={0} sx={{ maxWidth: 256 }}>
           <FireNav component="nav" disablePadding>
             <ListItemButton component="a" href="#customized-list">
-              <ListItemIcon sx={{ fontSize: 20 }}>🔥</ListItemIcon>
+             <ImageListItem><img src='./wow-talent.png'/></ImageListItem>
               <ListItemText
                 sx={{ my: 0 }}
-                primary="Firebash"
+                primary=""
                 primaryTypographyProps={{
                   fontSize: 20,
                   fontWeight: 'medium',
@@ -74,21 +85,14 @@ export default function Menu() {
                 }}
               />
             </ListItemButton>
-            <Divider />
-            <ListItem component="div" disablePadding>
-              <ListItemButton sx={{ height: 56 }}>
-               
-              </ListItemButton>
-              
-            </ListItem>
-            <Divider />
+            
             <Box
               sx={{
-                bgcolor: open ? 'rgba(71, 98, 130, 0.2)' : null,
+                bgcolor: open ? '#31384b' : null,
                 pb: open ? 2 : 0,
               }}
             >
-              <ListItemButton
+              {/* <ListItemButton
                 alignItems="flex-start"
                 onClick={() => setOpen(!open)}
                 sx={{
@@ -123,7 +127,7 @@ export default function Menu() {
                     transition: '0.2s',
                   }}
                 />
-              </ListItemButton>
+              </ListItemButton> */}
               {open &&
                 data.map((item) => (
                   <ListItemButton

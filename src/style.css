@@ -8,11 +8,12 @@
 .app_container{
     display: flex;
     justify-content: space-between;
+  
 }
 .content{
     display: flex;
     flex-direction: column;
-}
+   }
 
 
 .container{
@@ -22,7 +23,7 @@
     /* align-items: center; */
     margin: 20px 20px;
     padding: 10px 50px 10px 50px ;
-    min-width: 80vw;
+    min-width: 75vw;
     max-height: 40vh;
     /* border: 1px solid black; */
     background-color:#31384b;

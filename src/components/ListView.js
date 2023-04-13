@@ -59,7 +59,7 @@ const ListView = () => {
 
    
     <TableContainer component={Paper} sx={{backgroundColor:'#31384b',padding:'5px'}}>
-    <Table sx={{maxWidth:'96vw' ,backgroundColor: '#31384b',padding:'5px'}} aria-label="customized table">
+    <Table sx={{maxWidth:'96vw' ,backgroundColor: '#31384b',padding:'5px 10px'}} aria-label="customized table">
       <TableHead sx={{backgroundColor:'#161c32'}}>
         <TableRow >
           <StyledTableCell align='center'>Date</StyledTableCell>

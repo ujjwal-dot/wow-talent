@@ -20,7 +20,7 @@ import Dns from '@mui/icons-material/Dns';
 import Public from '@mui/icons-material/Public';
 
 const data = [
-  { icon: <People />, label: 'Authentication' },
+  { icon: <People />, label: 'Dashboard' },
   { icon: <Dns />, label: 'Database' },
   { icon: <PermMedia />, label: 'Storage' },
   { icon: <Public />, label: 'Hosting' },
@@ -56,7 +56,7 @@ export default function Menu() {
           palette: {
             mode: 'dark',
             primary: { main: 'rgb(102, 157, 246)' },
-            background: { paper: 'rgb(5, 30, 52)' },
+            background: { paper: '#31384b' },
           },
         })}
       >
@@ -77,52 +77,9 @@ export default function Menu() {
             <Divider />
             <ListItem component="div" disablePadding>
               <ListItemButton sx={{ height: 56 }}>
-                <ListItemIcon>
-                  <Home color="primary" />
-                </ListItemIcon>
-                <ListItemText
-                  primary="Project Overview"
-                  primaryTypographyProps={{
-                    color: 'primary',
-                    fontWeight: 'medium',
-                    variant: 'body2',
-                  }}
-                />
+               
               </ListItemButton>
-              <Tooltip title="Project Settings">
-                <IconButton
-                  size="large"
-                  sx={{
-                    '& svg': {
-                      color: 'rgba(255,255,255,0.8)',
-                      transition: '0.2s',
-                      transform: 'translateX(0) rotate(0)',
-                    },
-                    '&:hover, &:focus': {
-                      bgcolor: 'unset',
-                      '& svg:first-of-type': {
-                        transform: 'translateX(-4px) rotate(-20deg)',
-                      },
-                      '& svg:last-of-type': {
-                        right: 0,
-                        opacity: 1,
-                      },
-                    },
-                    '&:after': {
-                      content: '""',
-                      position: 'absolute',
-                      height: '80%',
-                      display: 'block',
-                      left: 0,
-                      width: '1px',
-                      bgcolor: 'divider',
-                    },
-                  }}
-                >
-                  <Settings />
-                  <ArrowRight sx={{ position: 'absolute', right: 4, opacity: 0 }} />
-                </IconButton>
-              </Tooltip>
+              
             </ListItem>
             <Divider />
             <Box

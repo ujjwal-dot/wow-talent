@@ -20,16 +20,19 @@
 .container{
     display: grid;
     grid-template-columns: auto auto auto;
-    /* justify-content: space-between; */
-    /* align-items: center; */
     margin: 10px 10px;
     padding: 10px 50px 10px 50px ;
     min-width: 80vw;
     max-height: 40vh;
-    /* border: 1px solid black; */
     background-color:#31384b;
     color: white;
     font-weight: bold;
+
+    @media screen and (max-width:800px) {
+        grid-template-columns:auto auto;
+        padding:0px;
+        max-height:50vh
+    }
 
 }
 
@@ -39,6 +42,11 @@
     align-items: center;
      margin: 5px;
     padding: 10px 0px 5px 5px;
+
+    @media screen and (max-width:800px) {
+        justify-content:center;
+        padding:0px;
+    }
     
 }
 .item{
@@ -56,5 +64,6 @@
 
 .menu{
     min-width: 10vh;
-    /* min-height: 100vh; */
+   
 }
+

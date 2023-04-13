@@ -65,41 +65,43 @@ const ListView = () => {
    
     <TableContainer component={Paper} sx={{backgroundColor:'#31384b',padding:'5px'}}>
     <Table sx={{maxWidth:'96vw',backgroundColor: '#31384b',padding:'5px 10px'}} aria-label="customized table">
-      <TableHead sx={{backgroundColor:'#161c32',maxHeight:'10px'}}>
+      <TableHead sx={{backgroundColor:'#161c32',maxHeight:'10px',}}>
         <TableRow >
-          <StyledTableCell align='center'>Date</StyledTableCell>
-          <StyledTableCell align="center">Day Install</StyledTableCell>
-          <StyledTableCell align="center">platform</StyledTableCell>
-          <StyledTableCell align="center">Day Uninstall</StyledTableCell>
-          <StyledTableCell align="center">Platform</StyledTableCell>
+          <StyledTableCell align='left'>Date</StyledTableCell>
+          <StyledTableCell align="left">Day Install</StyledTableCell>
+          <StyledTableCell align="left">platform</StyledTableCell>
+          <StyledTableCell align="left">Day Uninstall</StyledTableCell>
+          <StyledTableCell align="left">Platform</StyledTableCell>
 
-          <StyledTableCell align="center">Churn rate</StyledTableCell>
+          <StyledTableCell align="left">Churn rate</StyledTableCell>
           <StyledTableCell align="left">Churn Platform</StyledTableCell>
 
         </TableRow>
       </TableHead>
-      <TableBody >
+      <TableBody 
+      sx={{padding:0}}>
         {items.map((row) => (
           <StyledTableRow key={row.created_At}>
-            <StyledTableCell component="th" scope="row"align='center'>
-              {format(new Date(row.created_At),'dd/MM/yyyy')}
+            <StyledTableCell component="th" scope="row"align='left'>
+              {format(new Date(row.created_At),'dd MMM yyyy')}
             </StyledTableCell>
 
-            <StyledTableCell align="center">{row.totalinstall}</StyledTableCell>
+            <StyledTableCell align="left">{row.totalinstall}</StyledTableCell>
+            
 
             <StyledTableCell align="left" >
               <StyledTableRow > <AdbIcon fontSize='3px'/>{row.android_install}</StyledTableRow>
               <StyledTableRow ><AppleIcon fontSize='3px'/>{row.ios_install}</StyledTableRow>
              </StyledTableCell>
 
-            <StyledTableCell align="center">{row.totaluninstall}</StyledTableCell>
+            <StyledTableCell align="left">{row.totaluninstall}</StyledTableCell>
 
             <StyledTableCell align="left">
                            <StyledTableRow > <AdbIcon fontSize='3px'/>{row.android_churn}</StyledTableRow>
                            <StyledTableRow ><AppleIcon fontSize='3px'/>{row.ios_churn}</StyledTableRow>
             </StyledTableCell>
 
-            <StyledTableCell align="center">{row.ios_churn}</StyledTableCell>
+            <StyledTableCell align="left">{row.ios_churn}</StyledTableCell>
 
             <StyledTableCell align="left">
               <StyledTableRow > <AdbIcon fontSize='3px'/>{row.android_churn}</StyledTableRow>

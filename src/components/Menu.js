@@ -73,18 +73,9 @@ export default function Menu() {
       >
         <Paper elevation={0} sx={{ maxWidth: 256 }}>
           <FireNav component="nav" disablePadding>
-            <ListItemButton component="a" href="#customized-list">
-              <ListItemText
-                sx={{ my: 0 }}
-                primary=""
-                primaryTypographyProps={{
-                  fontSize: 20,
-                  fontWeight: 'medium',
-                  letterSpacing: 0,
-                }}
-              />
-            </ListItemButton>
-            
+          <ListItem><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS72Er2tXPoEP2Lt6vsi1-DVZu0G9QY74J64htithSviXx7EE94LFvMz1gNLbx2ntDx7w&usqp=CAU' width='150px'/></ListItem>
+
+                      
             <Box
               sx={{
                 bgcolor: open ? '#31384b' : null,
@@ -96,7 +87,7 @@ export default function Menu() {
                 data.map((item) => (
                   <ListItemButton
                     key={item.label}
-                    sx={{ py: 0, minHeight: 32, color: 'rgba(255,255,255,.8)' }}
+                    sx={{ py: 0, minHeight: 32, color: 'rgba(255,255,255,.8)',"&:hover":{backgroundColor:'#f5821e'} }}
                   >
                     <ListItemIcon sx={{ color: 'inherit' }}>
                       {item.icon}

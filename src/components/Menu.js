@@ -52,7 +52,7 @@ const FireNav = styled(List)({
 });
 
 export default function Menu() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
 
   
   return (

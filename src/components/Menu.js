@@ -52,7 +52,9 @@ const FireNav = styled(List)({
 });
 
 export default function Menu() {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
+
+  
   return (
     <Box sx={{ display: 'flex' }}>
       <ThemeProvider
@@ -82,7 +84,36 @@ export default function Menu() {
                 pb: open ? 2 : 0,
               }}
             >
-              
+              <ListItemButton
+                alignItems="flex-start"
+                onClick={() => setOpen(!open)}
+                sx={{
+                  px: 3,
+                  pt: 2.5,
+                  pb: open ? 0 : 2.5,
+                  '&:hover, &:focus': { '& svg': { opacity: open ? 1 : 0 } },
+                }}
+              >
+                <ListItemText
+                 
+                  secondary="Dashboard,Wow users,Internal Users, Category, Info Page, FAQ, and Coin"
+                  secondaryTypographyProps={{
+                    noWrap: true,
+                    fontSize: 12,
+                    lineHeight: '16px',
+                    color: open ? 'rgba(0,0,0,0)' : 'rgba(255,255,255,0.5)',
+                  }}
+                  sx={{ my: 0 }}
+                />
+                <KeyboardArrowDown
+                  sx={{
+                    mr: -1,
+                    opacity: 0,
+                    transform: open ? 'rotate(-180deg)' : 'rotate(0)',
+                    transition: '0.2s',
+                  }}
+                />
+              </ListItemButton>
               {open &&
                 data.map((item) => (
                   <ListItemButton

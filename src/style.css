@@ -9,6 +9,10 @@
     display: flex;
     justify-content: space-between;
     margin: 0 20px 0 0;
+    @media screen and (max-width:800px) {
+        flex-direction:column
+    }
+
   
 }
 .content{
@@ -31,7 +35,9 @@
     @media screen and (max-width:800px) {
         grid-template-columns:auto auto;
         padding:0px;
-        max-height:50vh
+        min-height:50vh;
+        min-width: 100vw;
+        font-size:0.7em
     }
 
 }
@@ -42,6 +48,8 @@
     align-items: center;
      margin: 5px;
     padding: 10px 0px 5px 5px;
+   
+
 
     @media screen and (max-width:800px) {
         justify-content:center;
@@ -55,8 +63,8 @@
     flex-direction: column;
     margin: 5px;
     font-size: 0.7em;
+    
 }
-
 .table{
      margin: 10px 10px;
 }
